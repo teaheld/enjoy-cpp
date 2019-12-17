@@ -14,10 +14,10 @@ int main() {
         values.push_back(val);
     }
     
-    for (decltype(values.size()) i = 0;
-         i != values.size() - 1;
-         ++i) {
-            std::cout << values[i] + values[i + 1] << std::endl;
+    for (auto it = values.begin(); 
+         it != values.end() - 1;
+         ++it) {
+            std::cout << *it + *(it + 1) << std::endl;
     }
     
     return 0;
